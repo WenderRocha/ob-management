@@ -1,24 +1,95 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cadastre-se, é rápido e fácil</title>
-  </head>
-  <body>
-    <form action="cadastrar" method="post">
-      <input type="text" name="name" placeholder="nome" /><br />
-      <input type="text" name="email" placeholder="email" /><br />
-      <input type="text" name="phone" placeholder="phone" /><br />
-      <input type="text" name="password" placeholder="password" /><br />
-      <!-- O segundo valor estará selecionado inicialmente -->
-      <select name="userStatus">
-        <option value="1">Ativo</option>
-        <option value="2" selected>Suspeenso</option>
-        <option value="3">Bloqueado</option>
-      </select>
-      <input type="submit" value="cadastrar" />
-    </form>
-  </body>
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+		<meta name="description" content="Unify Admin Panel" />
+		<meta name="keywords" content="Signup, Login, Admin, Dashboard, Bootstrap4, Sass, CSS3, HTML5, Responsive Dashboard, Responsive Admin Template, Admin Template, Best Admin Template, Bootstrap Template, Themeforest" />
+		<meta name="author" content="Bootstrap Gallery" />
+		<link rel="shortcut icon" href="img/favicon.ico" />
+		<title>Unify Admin Dashboard - Signup</title>
+		
+		<!-- Common CSS -->
+    <link rel="stylesheet" href="design-11/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="design-11/fonts/icomoon/icomoon.css" />
+
+		<!-- Mian and Login css -->
+    <link rel="stylesheet" href="design-11/css/main.css" />
+
+	</head>  
+
+	<body class="login-bg">
+			
+		<div class="container">
+			<div class="login-screen row align-items-center">
+				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+					<form action="cadastrar" method="post">
+						<div class="login-container">
+							<div class="row no-gutters">
+								<div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+									<div class="login-box">
+										<a href="#" class="login-logo">
+											<img src="design-11/img/unify.png" alt="Unify Admin Dashboard" />
+										</a>
+										<div class="input-group mb-2">
+											<div class="input-group-prepend">
+												<span class="input-group-text" id="fullName">
+													<i class="icon-account_circle"></i>
+												</span>
+											</div>
+											<input type="text" id="name" name="name" class="form-control" placeholder="Nome completo" aria-label="fullName" aria-describedby="fullName">
+										</div>
+										<div class="input-group mb-2">
+											<div class="input-group-prepend">
+												<span class="input-group-text" id="emaiID">
+													<i class="icon-account_circle"></i>
+												</span>
+											</div>
+											<input type="email" id="email" name="email" class="form-control" placeholder="Email" aria-label="emaiID" aria-describedby="emaiID">
+										</div>
+                    <div class="input-group mb-2">
+											<div class="input-group-prepend">
+												<span class="input-group-text" id="phone">
+													<i class="icon-phone"></i>
+												</span>
+											</div>
+											<input type="text" id="phone" name="phone" class="form-control" placeholder="Telefone" aria-label="phone" aria-describedby="phone">
+										</div>
+										<div class="input-group mb-2">
+											<div class="input-group-prepend">
+												<span class="input-group-text" id="pwd">
+													<i class="icon-account_circle"></i>
+												</span>
+											</div>
+											<input type="password" id="password" name="password" class="form-control" placeholder="Senha" aria-label="pwd" aria-describedby="pwd">
+										</div>
+
+                    <input type="hidden" name="userStatus" value="1">
+										<div class="actions clearfix">
+									  	<button type="submit" class="btn btn-primary">Cadastrar</button>
+									  </div>
+									  <div class="or"></div>
+									  <div class="mt-4">
+									  	<a href="login.html" class="additional-link">Já tem uma conta? <span>Entre agora</span></a>
+									  </div>
+									</div>
+								</div>
+								<div class="col-xl-8 col-lg-8 col-md-6 col-sm-12">
+									<div class="signup-slider"></div>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<footer class="main-footer no-bdr fixed-btm">
+			<div class="container">
+				Copyright Unify Admin 2017.
+			</div>
+		</footer>
+	</body>
 </html>

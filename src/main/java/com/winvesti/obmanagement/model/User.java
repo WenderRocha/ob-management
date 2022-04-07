@@ -12,10 +12,11 @@ import com.winvesti.obmanagement.controller.enums.UserStatus;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@AllArgsConstructor
+@NoArgsConstructor
 @Getter
 @Setter
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
@@ -32,9 +33,24 @@ public class User implements Serializable {
 	private String phone;
 	private String password;
 	private Integer userStatus;
+	
+
+	public User(Long id, String name, String email, String phone, String password, Integer userStatus) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.email = email;
+		this.phone = phone;
+		this.password = password;
+		this.userStatus = (userStatus == null) ? 1 : userStatus;
+	}
+
+	
 
 	public UserStatus getUserStatus() {
 		return UserStatus.toEnum(this.userStatus);
 	}
+
+
 
 }

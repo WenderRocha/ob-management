@@ -3,6 +3,7 @@ package com.winvesti.obmanagement.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.winvesti.obmanagement.model.User;
 import com.winvesti.obmanagement.repository.UserRepository;
@@ -21,8 +22,21 @@ public class UserController {
 	}
 	
 	@PostMapping(value = "/cadastrar")
-	public String save(User user) {
+	public ModelAndView save(User user) {
 		userRepository.save(user);
-		return "default/user/register";
+		
+		ModelAndView view = new ModelAndView("default/index");
+		Iterable<User> usersIt = userRepository.findAll();
+		view.addObject("users", usersIt);
+		
+		return view;
+	}
+	
+	@GetMapping(value = "/usuarios")
+	public ModelAndView users() {
+		ModelAndView andView = new ModelAndView("default/user/register");
+		Iterable<User> usersIt = userRepository.findAll();
+		andView.addObject("users", usersIt);
+		return andView;
 	}
 }
